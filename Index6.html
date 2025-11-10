@@ -135,7 +135,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
+            padding: 20px 0;
             position: relative;
         }
 
@@ -153,8 +153,8 @@
         }
 
         .logo img {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             border-radius: 2.5cm;
             object-fit: cover;
             border: 3px solid var(--secondary);
@@ -163,17 +163,25 @@
 
         /* Mobile logo adjustments */
         @media (max-width: 768px) {
+            .header-container {
+                padding: 15px 0;
+            }
+            
             .logo img {
-                width: 80px;
-                height: 80px;
+                width: 160px;
+                height: 160px;
                 border-radius: 1.5cm;
             }
         }
 
         @media (max-width: 480px) {
+            .header-container {
+                padding: 12px 0;
+            }
+            
             .logo img {
-                width: 70px;
-                height: 70px;
+                width: 140px;
+                height: 140px;
                 border-radius: 1.5cm;
             }
         }
@@ -1176,7 +1184,7 @@
 
         @media (max-width: 768px) {
             .header-container {
-                padding: 10px 0;
+                padding: 15px 0;
             }
             
             nav {
@@ -1706,14 +1714,13 @@
         <div class="container">
             <div class="section-title">
                 <h2>Our Story</h2>
-                <p>Discover the coastal passion and tradition behind our delicious creations</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
                     <h3>Welcome to PIES AND GRILLS</h3>
                     <p>Nestled in the heart of Pietermaritzburg, PIES AND GRILLS is a culinary destination where traditional comfort food meets contemporary flair. Our restaurant was born from a passion for creating exceptional dining experiences that celebrate the rich culinary heritage of South Africa while embracing modern techniques and flavors.</p>
                     <p>At the heart of our kitchen is a commitment to quality and authenticity. We source the freshest local ingredients, from prime cuts of meat to seasonal vegetables, ensuring every dish tells a story of flavor and craftsmanship. Our signature pies feature buttery, flaky crusts enveloping rich, savory fillings that have become the talk of the town.</p>
-                    <p>Our grill masters take pride in their art, carefully preparing each cut to perfection over open flames. Whether it's our succulent steaks, tender grilled chicken, or perfectly charred seafood, every dish reflects our dedication to culinary excellence. We believe that great food brings people together, creating memories that last long after the meal is over.</p>
+                    <p>Our grill masters take pride in their art, carefully preparing each cut to perfection over open flames. Whether it's our succulent steaks or tender grilled chicken, every dish reflects our dedication to culinary excellence. We believe that great food brings people together, creating memories that last long after the meal is over.</p>
                     <a href="#menu" class="btn">Explore Our Menu</a>
                 </div>
                 <div class="about-image">
@@ -2028,7 +2035,7 @@ const menuItems = [
     { id: 105, name: "AVO-EGG", price: 75.00, description: "Sliced avocado, scrambled eggs, 2 viennas, onion rings, 2 slices of toast", category: "breakfast", image: "assets/images/menu/breakfast-avo-egg.jpg" },
     { id: 106, name: "MINCE ON TOAST", price: 85.00, description: "Saucy mince with beans, melted cheddar cheese, egg, 2 slices of toast", category: "breakfast", image: "assets/images/menu/breakfast-mince-on-toast.jpg" },
     { id: 107, name: "BREAKFAST BANGERS", price: 79.00, description: "Chicken/Beef/Pork/Mutton 2 bangers, 2 eggs, 2 toasts", category: "breakfast", image: "assets/images/menu/standard.jpg" },
-    { id: 108, name: "OMELETTE", price: 85.00, description: "3 eggs, served with 2 toast slices and fillings of your choice (Bacon/Onion/Tomato/Cheese/Ham/Green pepper/Mushrooms)", category: "breakfast", image: "assets/images/menu/omlette.jpg" },
+    { id: 108, name: "OMELETTE", price: 85.00, description: "3 eggs, served with 2 toast slices and fillings of your choice (Bacon/Onion/Tomato/Cheese/Ham/Green pepper/Mushrooms)", category: "breakfast", image: "assets/images/menu/Omelet as a meal.jpg" },
     
     // BUILD YOUR BREAKFAST (Add-ons) - SEPARATE SECTION
     { id: 116, name: "MUSHROOMS", price: 25.00, description: "Grilled mushrooms - perfect addition to any breakfast", category: "build_your_breakfast", image: "assets/images/menu/MUSHROOMS.jpg" },
@@ -2085,7 +2092,7 @@ const menuItems = [
         mealPrice: 65.00,
         description: "Chicken fillet, cheese, tomato, lettuce and sauce", 
         category: "burgers", 
-        image: "assets/images/menu/CHICKEN BURGER.jpg",
+        image: "assets/images/menu/Chicken burger served with fries.jpg",
         hasMealOption: true
     },
     
@@ -2097,7 +2104,7 @@ const menuItems = [
         mealPrice: 68.00,
         description: "Sliced chicken, cheese, veggies and sauce", 
         category: "wraps", 
-        image: "assets/images/menu/CHICKEN MAYO WRAP.jpg",
+        image: "assets/images/menu/Chicken wrap as a meal.jpg",
         hasMealOption: true
     },
     { 
@@ -2107,7 +2114,7 @@ const menuItems = [
         mealPrice: 74.00,
         description: "Sliced chicken, cheese, veggies and sauce", 
         category: "wraps", 
-        image: "assets/images/menu/CHICKEN MAYO WRAP.jpg",
+        image: "assets/images/menu/Chicken wrap as a meal.jpg",
         hasMealOption: true
     },
     { 
@@ -2142,7 +2149,7 @@ const menuItems = [
         mealPrice: 45.00,
         description: "Classic hot dog served with fries", 
         category: "grills", 
-        image: "assets/images/menu/hot-dog.jpg",
+        image: "assets/images/menu/Hot dog As a meal.jpg",
         hasMealOption: true
     },
     { 
@@ -2313,6 +2320,14 @@ const menuItems = [
     category: "cold_drinks", 
     image: "assets/images/pics/Wadur.jpg"
   },
+  { 
+    id: 910, 
+    name: "MOCKTAILS", 
+    price: 35.00,
+    description: "Refreshing non-alcoholic cocktails", 
+    category: "cold_drinks", 
+    image: "assets/images/menu/mocktails.jpeg"
+  },
 
   
 ];
@@ -2400,8 +2415,8 @@ const galleryImages = [
     "assets/images/pics/Gallery2.jpg",
     "assets/images/pics/Gallery3.jpg",
     "assets/images/pics/Gallery4.jpg",
-    "assets/images/pics/Gallery5.jpg",
-    "assets/images/pics/Gallery6.jpg"
+    "assets/images/menu/FB_IMG_1762449016989.jpg",
+    "assets/images/menu/FB_IMG_1762449025538.jpg"
 ];
 // Testimonials Data
 const testimonials = [
